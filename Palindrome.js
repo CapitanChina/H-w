@@ -7,7 +7,7 @@ return name.toLowerCase()===reverseName
 }
 console.log("palCheck: "+palCheck(name1)); */
 
-let name1 = "Ешь немытого ты меньше";
+let name1 = "А Лист - сила!";
 let name2 = "Able was I ere I saw Elba";
 function palCheck(name) {
 
