@@ -7,22 +7,22 @@ return name.toLowerCase()===reverseName
 }
 console.log("palCheck: "+palCheck(name1)); */
 
-const name1 = "А луна канула";
-const name2 = "Marina";
+let name1 = "Ешь немытого ты меньше";
+let name2 = "Able was I ere I saw Elba";
 function palCheck(name) {
 
-let reverseName =  name.toLowerCase().split(' ').join('').split('');
+let reverseName =  name.toLowerCase().replace(/[^a-zа-яё]/gi, '').split('');
 for (let i = 0; i < reverseName.length; i++) {
     reverseName[i]=reverseName[reverseName.length-(i+1)];
     reverseName[reverseName.length-(i+1)]=reverseName[i];    
 }
-return name.toLowerCase().split(' ').join('')===reverseName.join('');
-/* return console.log(reverseName.join('')); */
+return name.toLowerCase().replace(/[^a-zа-яё]/gi, '')===reverseName.join('');
 }
-console.log("palCheck: "+palCheck(name1)); 
+console.log("palCheck №1: "+palCheck(name1)); 
+console.log("palCheck №2: "+palCheck(name2));
 
 
 
 
-/* const name1 = "Шла cfif ijcc";
-console.log(name1.split(' ').join ('').split('')) */
+/* const name1 = "Шла cfif,! ijcc";
+console.log(name1.replace(/[^a-zа-яё]/gi, '')) */
