@@ -27,7 +27,7 @@ function stepCheck(house) {
                     distance = Math.abs(i - zero);
                     resultArray.push(distance);
                     break;
-                    }                    
+                }                    
             }
         }              
     }
