@@ -10,16 +10,15 @@ console.log("palCheck: "+palCheck(name1)); */
 let name1 = "А Лист - сила!";
 let name2 = "Able was I ere I saw Elba";
 function palCheck(name) {
-
-let reverseName =  name.toLowerCase().replace(/[^a-zа-яё]/gi, '').split('');
-for (let i = 0; i < reverseName.length; i++) {
-    reverseName[i]=reverseName[reverseName.length-(i+1)];
-    reverseName[reverseName.length-(i+1)]=reverseName[i];    
+    let reverseName = name.toLowerCase().replace(/[^a-zа-яё]/gi, '').split('');
+    for (let i = 0; i < reverseName.length; i++) {
+        reverseName[i] = reverseName[reverseName.length - (i + 1)];
+        reverseName[reverseName.length - (i + 1)] = reverseName[i];    
 }
-return name.toLowerCase().replace(/[^a-zа-яё]/gi, '')===reverseName.join('');
+return name.toLowerCase().replace(/[^a-zа-яё]/gi, '') === reverseName.join('');
 }
-console.log("palCheck №1: "+palCheck(name1)); 
-console.log("palCheck №2: "+palCheck(name2));
+console.log("palCheck №1: " + palCheck(name1)); 
+console.log("palCheck №2: " + palCheck(name2));
 
 
 
